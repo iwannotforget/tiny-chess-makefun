@@ -12,6 +12,19 @@ seventh rank, king shelter). `main.py` is the whole engine, packed as
 a zlib payload with its unpacker; it plays the make.fun gauntlet
 through the env at MAKEFUN_ENV_URL.
 
+## Engine notes
+
+The engine was built and graded in stages: an initial version with a
+transposition table and one with a larger node budget both scored
+below the plain design on the kit's practice trial, so the submitted
+entry keeps the simpler, stronger configuration above. Move legality
+is verified by exact perft counts (start position depth 3 = 8,902;
+Kiwipete depth 2 = 2,039), and every game the trial plays replays
+byte for byte, because the search depends only on the position and
+the fixed node budget. Size accounting: `main.py` is 2,952 bytes of
+the 4,096-byte entry cap, and the whole repository stays under the
+8,192-byte snapshot cap.
+
 ## Run it
 
 ```sh
