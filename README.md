@@ -23,7 +23,17 @@ Kiwipete depth 2 = 2,039), and every game the trial plays replays
 byte for byte, because the search depends only on the position and
 the fixed node budget. Size accounting: `main.py` is 2,952 bytes of
 the 4,096-byte entry cap, and the whole repository stays under the
-8,192-byte snapshot cap.
+8,192-byte snapshot cap. The configuration submitted here is the
+strongest verified of the three engine variants that were graded.
+
+## Strength
+
+On the kit's practice trial 0 the engine graded at Elo 997
+(1 win, 1 draw, 4 losses). The prize target is the Sunfish
+baseline at roughly Elo 1,365, so this entry does not claim
+baseline strength; what it optimises for is size efficiency —
+a complete, legal and deterministic playing engine in
+2,952 bytes.
 
 ## Run it
 
